@@ -1,0 +1,70 @@
+{
+  "name": "ianDino",
+  "description": "file sharing bot store posts and it can access by special links",
+  "keywords": [
+    "telegram",
+    "file",
+    "sharing"
+  ],
+  "repository": "https://github.com/IanTelegram",
+  "logo": "https://telegra.ph/file/598300a3c777d0a477b05.jpg",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Your Bot token, Get it from @Botfather",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your owner ID",
+      "value": "1494610306"
+    },
+    "APP_ID":{
+      "description": "your app id, take it from my.telegram.org",
+      "value": "6244159"
+    },
+    "API_HASH":{
+      "description": "your api hash, take it from my.telegram.org",
+      "value": "3f15b21827506cb63890f756743be15f"
+    },
+    "CHANNEL_ID":{
+      "description": "make a channel (database channel), then make the bot as admin in channel, and it's id",
+      "value": "-1001401283055"
+    },
+    "FORCE_SUB_CHANNEL":{
+      "description": "id of the channel or group, if you want enable force sub feature else put 0",
+      "value": ""
+    },
+    "START_MESSAGE": {
+      "description": "Optional: start message of bot, use HTML parsemode format",
+      "value": "𝙀𝙃 𝘼𝙉𝘼𝙆 𝙃𝘼𝙍𝘼𝙈  {first}\n\n 𝙈𝘼𝙐 𝙉𝙂𝘼𝙋𝘼𝙄𝙉 𝙎𝙄 "
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Optional: Force Sub message of bot, use HTML parsemode format",
+      "value": "Hello {first}\n\n<b>𝙅𝙊𝙄𝙉 𝘿𝙐𝙇𝙐 𝙏𝙊𝘿 𝙏𝙀𝙍𝙐𝙎 𝙏𝙀𝙆𝘼𝙉 𝘾𝙊𝘽𝘼 𝙇𝘼𝙂𝙄 𝘽𝙄𝘼𝙍 𝙈𝙐𝙉𝘾𝙐𝙇 𝙑𝙄𝘿𝙀𝙊 𝙉𝙔𝘼\n\n𝙐𝙏𝘼𝙈𝘼𝙆𝘼𝙉 𝙅𝙊𝙄𝙉 𝙊𝙆𝙀𝙔</b>"
+    },
+    "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only create links",
+      "value": "1494610306 2113034787 5241534420 5137157066 5116548438 5261846925 5133855965",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
+
